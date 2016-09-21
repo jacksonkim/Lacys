@@ -1,0 +1,14 @@
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LaceysMobile.CreateDb.Console\bin\Debug\LaceysMobile.CreateDb.Console.exe.config
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LaceysMobile.CreateDb.Console\bin\Debug\LaceysMobile.CreateDb.Console.exe
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LaceysMobile.CreateDb.Console\bin\Debug\LaceysMobile.CreateDb.Console.pdb
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LaceysMobile.CreateDb.Console\bin\Debug\EntityFramework.dll
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LaceysMobile.CreateDb.Console\bin\Debug\EntityFramework.SqlServer.dll
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LaceysMobile.CreateDb.Console\bin\Debug\LacysMobile.Data.dll
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LaceysMobile.CreateDb.Console\bin\Debug\LacysMobile.Models.dll
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LaceysMobile.CreateDb.Console\bin\Debug\LacysMobile.Data.pdb
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LaceysMobile.CreateDb.Console\bin\Debug\LacysMobile.Models.pdb
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LaceysMobile.CreateDb.Console\bin\Debug\EntityFramework.xml
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LaceysMobile.CreateDb.Console\bin\Debug\EntityFramework.SqlServer.xml
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LaceysMobile.CreateDb.Console\obj\Debug\LacysMobile.CreateDb.ConsoleApp.csprojResolveAssemblyReference.cache
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LaceysMobile.CreateDb.Console\obj\Debug\LaceysMobile.CreateDb.Console.exe
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LaceysMobile.CreateDb.Console\obj\Debug\LaceysMobile.CreateDb.Console.pdb

@@ -1,0 +1,30 @@
+div.navbar-header a.navbar-brand.logo {
+  background: url(Images/logo.jpg) no-repeat;
+  width: 178px;
+  height: 40px;
+  margin-top: -2px;
+}
+.navbar-default .navbar-nav > li > a {
+  font-size: 16px;
+}
+.dropdown-menu > li > a {
+  font-size: 14px;
+}
+span.shopping-cart-icon {
+  float: right;
+  margin-left: 20px;
+}
+span.shopping-cart-icon a {
+  margin-top: -2px;
+}
+span.badge {
+  background-color: #2b3e50;
+  padding-top: 1px;
+  position: relative;
+  left: -17px;
+  top: -3px;
+}
+span.badge span.badge-number {
+  position: relative;
+  top: -1px;
+}

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+
+    @Styles.Render("~/Content/Bootstrap")
+    @Styles.Render("~/Content/Bootstrap/BootstrapTheme")
+    @Styles.Render("~/Content/Layout")
+    @Scripts.Render("/bundles/jquery")
+    @Scripts.Render("/bundles/jquerymobile")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            @Html.Partial("_Navbar")
+        </div>
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <div class="footer-details">
+        <div class="container">
+            @Html.Partial("_Footer")
+        </div>
+    </div>
+
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/Bootstrap")
+</body>
+</html>

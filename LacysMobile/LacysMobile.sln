@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LacysMobile.Web", "LacysMobile\LacysMobile.Web.csproj", "{6D2A67C8-B040-4B56-AC9D-E2E7FE27DCE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LacysMobile.Models", "LacysMobile.Models\LacysMobile.Models.csproj", "{2DBC8553-BE36-4EA1-80E4-3BD192437652}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LacysMobile.Data", "LacysMobile.Data\LacysMobile.Data.csproj", "{286E6E3C-1207-4C8F-85AD-C9E262B1330B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LacysMobile.CreateDb.ConsoleApp", "LaceysMobile.CreateDb.Console\LacysMobile.CreateDb.ConsoleApp.csproj", "{EF7D07D3-7482-4BDB-ACEB-73FECDA816C7}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://lacysmobile.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = LaceysMobile.CreateDb.Console\\LacysMobile.CreateDb.ConsoleApp.csproj
+		SccProjectName1 = LaceysMobile.CreateDb.Console
+		SccLocalPath1 = LaceysMobile.CreateDb.Console
+		SccProjectUniqueName2 = LacysMobile.Data\\LacysMobile.Data.csproj
+		SccProjectName2 = LacysMobile.Data
+		SccLocalPath2 = LacysMobile.Data
+		SccProjectUniqueName3 = LacysMobile.Models\\LacysMobile.Models.csproj
+		SccProjectName3 = LacysMobile.Models
+		SccLocalPath3 = LacysMobile.Models
+		SccProjectUniqueName4 = LacysMobile\\LacysMobile.Web.csproj
+		SccProjectName4 = LacysMobile
+		SccLocalPath4 = LacysMobile
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D2A67C8-B040-4B56-AC9D-E2E7FE27DCE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D2A67C8-B040-4B56-AC9D-E2E7FE27DCE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D2A67C8-B040-4B56-AC9D-E2E7FE27DCE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D2A67C8-B040-4B56-AC9D-E2E7FE27DCE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DBC8553-BE36-4EA1-80E4-3BD192437652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DBC8553-BE36-4EA1-80E4-3BD192437652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DBC8553-BE36-4EA1-80E4-3BD192437652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DBC8553-BE36-4EA1-80E4-3BD192437652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{286E6E3C-1207-4C8F-85AD-C9E262B1330B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{286E6E3C-1207-4C8F-85AD-C9E262B1330B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{286E6E3C-1207-4C8F-85AD-C9E262B1330B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{286E6E3C-1207-4C8F-85AD-C9E262B1330B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF7D07D3-7482-4BDB-ACEB-73FECDA816C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7D07D3-7482-4BDB-ACEB-73FECDA816C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7D07D3-7482-4BDB-ACEB-73FECDA816C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7D07D3-7482-4BDB-ACEB-73FECDA816C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

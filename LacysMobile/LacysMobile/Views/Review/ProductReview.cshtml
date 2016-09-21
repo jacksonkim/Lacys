@@ -1,0 +1,58 @@
+@model LacysMobile.Models.ReviewModel
+
+@{
+    ViewBag.Title = ViewBag.Header;
+}
+
+<div class="page-header" id="banner">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1>@ViewBag.Header</h1>
+        </div>
+        <div class="col-lg-6">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="well">
+            @using (Html.BeginForm("SuccessfulReview", "Review", FormMethod.Post, new { Class = "bs-example form-horizontal" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+            
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Score, new { Class = "col-lg-2 control-label" })
+                    <div class="col-lg-10 radio">
+                        <div>@Html.RadioButtonFor(x => x.Score, "5", new { Class = "radio", Checked = "true", Style = "float:left;margin-top:-4px;" }) Excellent</div>
+                        <div>@Html.RadioButtonFor(x => x.Score, "4", new { Class = "radio", Style = "clear:both; float:left;margin-top:-8px;" })Good</div>
+                        <div>@Html.RadioButtonFor(x => x.Score, "3", new { Class = "radio", Style = "clear:both; float:left;margin-top:-9px;" })Average</div>
+                        <div>@Html.RadioButtonFor(x => x.Score, "2", new { Class = "radio", Style = "clear:both; float:left;margin-top:-9px;" })Fair</div>
+                        <div>@Html.RadioButtonFor(x => x.Score, "1", new { Class = "radio", Style = "clear:both; float:left;margin-top:-10px;" })Poor </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Comments, new { Class = "col-lg-2 control-label" })
+                    <div class="col-lg-10">
+                        @Html.TextAreaFor(model => model.Comments, new { Class = "form-control" })
+                        <div class="has-warning">
+                            @Html.ValidationMessageFor(model => model.Comments)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-1">
+                        <input type="submit" value="Submit" class="btn btn-primary" />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/Bundles/jqueryval")
+}

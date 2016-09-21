@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Successful Registration";
+    string userRole = "Customer";
+
+    if (User.IsInRole("Administrator"))
+    {
+        userRole = "Administrator";
+    }
+
+    if (User.IsInRole("Employee"))
+    {
+        userRole = "Employee";
+    }
+}
+
+<div class="page-header" id="banner">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1>Welcome @User.Identity.Name</h1>
+            <p class="lead">You have successfully registered and are signed in as a @userRole.</p>
+        </div>
+        <div class="col-lg-6">
+        </div>
+    </div>
+</div>

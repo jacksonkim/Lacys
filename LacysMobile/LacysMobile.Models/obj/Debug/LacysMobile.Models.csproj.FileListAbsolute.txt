@@ -1,0 +1,10 @@
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LacysMobile.Models\bin\Debug\LacysMobile.Models.dll.config
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LacysMobile.Models\bin\Debug\LacysMobile.Models.dll
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LacysMobile.Models\bin\Debug\LacysMobile.Models.pdb
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LacysMobile.Models\bin\Debug\EntityFramework.dll
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LacysMobile.Models\bin\Debug\EntityFramework.SqlServer.dll
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LacysMobile.Models\bin\Debug\EntityFramework.xml
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LacysMobile.Models\bin\Debug\EntityFramework.SqlServer.xml
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LacysMobile.Models\obj\Debug\LacysMobile.Models.csprojResolveAssemblyReference.cache
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LacysMobile.Models\obj\Debug\LacysMobile.Models.dll
+I:\School\Advanced Systems\LacysMobile\LacysMobile\LacysMobile.Models\obj\Debug\LacysMobile.Models.pdb

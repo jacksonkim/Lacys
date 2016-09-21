@@ -1,0 +1,52 @@
+﻿<div class="navbar-header">
+    <a href="/Home" class="navbar-brand logo"></a>
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <span class="shopping-cart-icon">
+        <a href="/Cart/Checkout" class="navbar-brand glyphicon glyphicon-shopping-cart">
+            <span class="badge"><span class="badge-number">@ViewBag.ItemCount</span></span>
+        </a>
+    </span>
+</div>
+
+<div class="navbar-collapse collapse" id="navbar-main">
+    <ul class="nav navbar-nav">
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="shop-by-category">Shop by Category <span class="caret"></span></a>
+            <ul class="dropdown-menu" aria-labelledby="themes">
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="womens-clothing">Women's Clothing</a>
+                    <ul>
+                        <li>@Html.ActionLink("Dresses", "Category", "Products", new { itemType = "WomenDress" }, new { Class = "navbar-link" })</li>
+                        <li>@Html.ActionLink("Coats", "Category", "Products", new { itemType = "WomenCoats" }, new { Class = "navbar-link" })</li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="mens-clothing">Men's Clothing</a>
+                    <ul>
+                        <li>@Html.ActionLink("Pants", "Category", "Products", new { itemType = "MenPants" }, new { Class = "navbar-link" })</li>
+                        <li>@Html.ActionLink("Coats", "Category", "Products", new { itemType = "MenCoats" }, new { Class = "navbar-link" })</li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="accessories">Accessories</a>
+                    <ul>
+                        <li>@Html.ActionLink("Handbags", "Category", "Products", new { itemType = "Handbags" }, new { Class = "navbar-link" })</li>
+                        <li>@Html.ActionLink("Sunglasses", "Category", "Products", new { itemType = "Sunglasses" }, new { Class = "navbar-link" })</li>
+                    </ul>
+                    <li class="divider"></li>
+            </ul>
+        </li>
+        <li>
+            @Html.ActionLink("Feedback", "FeedbackForm", "Feedback")
+        </li>
+        @Html.Partial("_AccountNavLinks")
+    </ul>
+
+</div>
+

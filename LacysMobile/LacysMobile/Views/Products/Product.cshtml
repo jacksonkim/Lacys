@@ -1,0 +1,113 @@
+﻿@model LacysMobile.Models.Product
+
+@{
+    ViewBag.Title = ViewBag.Header;
+    string imageUrl = "../../Images/" + Model.ImageName + "_Lrg.jpg";
+}
+
+<div class="page-header" id="banner">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1>@ViewBag.Header</h1>
+            @*<p class="lead">Quality Retail Shopping</p>*@
+        </div>
+        <div class="col-lg-6">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        @using (Html.BeginForm("AddToCart", "Products", FormMethod.Post, new { Class = "bs-example form-horizontal" }))
+        {
+            <ul class="category-list-vertical">
+                <li>
+                    <img src="@imageUrl" style="width:289px; height:419px;" alt="@Model.Description"/>
+                    <h5 class="align-left text-primary alert-link">Product Details:</h5>
+                    <h5 class="align-left">@Model.Description</h5>
+                    <h5 class="align-left">Reg. $@Model.SellingPrice</h5>
+                </li>
+                <li class="align-left">
+                    <div style="padding-left: 0px;">
+                        Quantity:
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            <span class="quantity-value">0</span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu alert-warning">
+                            <li><a href="#" class="addQuantity">1</a></li>
+                            <li><a href="#" class="addQuantity">2</a></li>
+                            <li><a href="#" class="addQuantity">3</a></li>
+                            <li><a href="#" class="addQuantity">4</a></li>
+                            <li><a href="#" class="addQuantity">5</a></li>
+                            <li><a href="#" class="addQuantity">6</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </li>
+                <li style="margin-top: 15px">
+                    <button type="submit" class="btn btn-primary">Add To Cart</button>
+                    <a href="/Cart/Checkout" class="btn btn-primary" style="margin-left: 10px">Checkout</a>
+
+                </li>
+                <li>
+                    <input id="productQuantity" name="productQuantity" type="hidden" value="0" />
+                    <input id="productId" name="productId" type="hidden" value="@Model.ProductID" />
+                    <input id="sellingPrice" name="sellingPrice" type="hidden" value="@Model.SellingPrice" />
+                    <input id="productName" name="productName" type="hidden" value="@Model.Name" />
+                </li>
+            </ul>
+        }
+    </div>
+</div>
+<br class="clear" />
+<br />
+
+<!-- Product Review Section-->
+@Html.ActionLink("Write a Review", "SignInOrRegister", "Review", new { id = Model.ProductID }, new { Class = "btn btn-primary" })
+<br />
+<br />
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Reviews for @Model.Name
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Review Date</th>
+                <th>Score</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+
+        @foreach (var review in (IEnumerable<LacysMobile.Models.ProductReview>)@ViewData["ReviewModel"])
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => review.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => review.Score)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => review.Comments)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $('li a.addQuantity').on('click', function () {
+                var text = $(this).text();
+                $('span.quantity-value').text(text);
+                $('input#productQuantity').val(text);
+            });
+        });
+    </script>
+}

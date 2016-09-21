@@ -1,0 +1,36 @@
+﻿@model List<LacysMobile.Models.Product>
+@{
+    ViewBag.Title = ViewBag.Header;
+}
+
+<div class="page-header" id="banner">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1>@ViewBag.Header</h1>
+            @*<p class="lead">Quality Retail Shopping</p>*@
+        </div>
+        <div class="col-lg-6">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <ul class="category-list">
+            <p></p>
+            @foreach (var product in Model)
+            {
+                string imageUrl = "../../Images/" + product.ImageName + "_Sml.jpg";
+                string hrefString = "/Products/Product/?id=" + @product.ProductID;
+            
+                <li>
+                    <a href="@hrefString">
+                        <img src="@imageUrl" style="width:100px; height:118px;" alt="@product.Description"/>
+                    </a>
+                    <h6>@product.Name</h6>
+                    <h6 class="text-primary">Reg. $@product.SellingPrice</h6>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

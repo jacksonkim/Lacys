@@ -1,0 +1,129 @@
+﻿@model LacysMobile.Web.Models.UserModel
+
+@{
+    ViewBag.Title = "Address";
+}
+
+<div class="page-header" id="banner">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1>@ViewBag.Header</h1>
+            @*<p class="lead">Quality Retail Shopping</p>*@
+        </div>
+        <div class="col-lg-6">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="well">
+
+            @using (Html.BeginForm("Payment", "Cart", FormMethod.Post, new { Class = "bs-example form-horizontal" }))
+            {
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FirstName, new { Class = "col-lg-2 control-label" })
+                    <div class="col-lg-10">
+                        @Html.EditorFor(model => model.FirstName, new { Class = "form-control" })
+                        <div class="has-warning">
+                            @Html.ValidationMessageFor(model => model.FirstName)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LastName, new { Class = "col-lg-2 control-label" })
+                    <div class="col-lg-10">
+                        @Html.EditorFor(model => model.LastName, new { Class = "form-control" })
+                        <div class="has-warning">
+                            @Html.ValidationMessageFor(model => model.LastName)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Address, new { Class = "col-lg-2 control-label" })
+                    <div class="col-lg-10">
+                        @Html.EditorFor(model => model.Address, new { Class = "form-control" })
+                        <div class="has-warning">
+                            @Html.ValidationMessageFor(model => model.Address)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.City, new { Class = "col-lg-2 control-label" })
+                    <div class="col-lg-10">
+                        @Html.EditorFor(model => model.City)
+                        <div class="has-warning">
+                            @Html.ValidationMessageFor(model => model.City)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    @Html.LabelFor(model => model.State, new { Class = "col-lg-2 control-label" })
+                    <div class="col-lg-10">
+                        @Html.DropDownListFor(model => model.State, LacysMobile.Web.Helpers.SelectListItemHelper.GetStateList(), new { Class = "form-control" })
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Zip, new { Class = "col-lg-2 control-label" })
+                    <div class="col-lg-10">
+                        @Html.EditorFor(model => model.Zip)
+                        <div class="has-warning">
+                            @Html.ValidationMessageFor(model => model.Zip)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Phone, new { Class = "col-lg-2 control-label" })
+                    <div class="col-lg-10">
+                        @Html.EditorFor(model => model.Phone)
+                        <div class="has-warning">
+                            @Html.ValidationMessageFor(model => model.Phone)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, new { Class = "col-lg-2 control-label" })
+                    <div class="col-lg-10">
+                        @Html.EditorFor(model => model.Email)
+                        <div class="has-warning">
+                            @Html.ValidationMessageFor(model => model.Email)
+                        </div>
+                    </div>
+                </div>
+                
+                <br class="clear" />
+                
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ShipType, new { Class = "col-lg-2 control-label" })
+                    <div class="col-lg-10">
+                        <div class="radio">
+                            @Html.RadioButtonFor(model => model.ShipType, "address", new{Checked="true"} ) Address (above)
+                        </div>
+                        <div class="radio">
+                            @Html.RadioButtonFor(model => model.ShipType, "store") Store
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="form-group">
+                    <div class="col-lg-1">
+                        <input type="submit" value="Continue" class="btn btn-primary" />
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/Bundles/jqueryval")
+}

@@ -1,0 +1,136 @@
+﻿@model List<LacysMobile.Models.Feedback>
+@{
+    ViewBag.Title = ViewBag.Header;
+    IEnumerable<LacysMobile.Web.Models.OrderGroupModel> Orders = (IEnumerable<LacysMobile.Web.Models.OrderGroupModel>)@ViewData["Orders"];
+}
+
+@*orders*@
+<div class="page-header" id="banner">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1>@ViewBag.Header</h1>
+            @*<p class="lead">Quality Retail Shopping</p>*@
+        </div>
+        <div class="col-lg-6">
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Sales Data
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Sales Date</th>
+                <th>Product Name</th>
+                <th>Product Quantity</th>
+                <th>Product Price</th>
+            </tr>
+        </thead>
+
+        @foreach (var order in Orders)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => order.ShortDate)
+                </td>
+                <td>
+                    <table style="margin: 0; padding: 0;">
+                        @foreach (var product in order.OrderItems)
+                        {
+                            <tr style="border-bottom:1px solid black">
+                                <td>
+                                    @Html.DisplayFor(modelItem => product.ProductName)
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </td>
+                <td>
+                    <table style="margin: 0; padding: 0;">
+                        @foreach (var product in order.OrderItems)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => product.Quantity)
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </td>
+                <td>
+                    <table style="margin: 0; padding: 0;">
+                        @foreach (var product in order.OrderItems)
+                        {
+                            <tr>
+                                <td>$@Html.DisplayFor(modelItem => product.Cost)
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+@*feedbacks*@
+@using (Html.BeginForm("EmployeePagePost", "Employee", FormMethod.Post, new { Class = "bs-example form-horizontal" }))
+{
+    int count = 0;
+    foreach (var feedback in Model)
+    {
+    <div class="panel panel-default">
+        @if (count == 0)
+        {
+            <div class="panel-heading">
+                Feedback Data
+            </div>
+            count = 1;
+        }
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Date</th>
+                    <td>
+                        @Html.DisplayFor(modelItem => feedback.Date)
+                    </td>
+                </tr>
+                <tr>
+                    <th>First Name</th>
+                    <td>
+                        @Html.DisplayFor(modelItem => feedback.FirstName)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td>
+                        @Html.DisplayFor(modelItem => feedback.LastName)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>
+                        @Html.DisplayFor(modelItem => feedback.Email)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Comments</th>
+                    <td>
+                        @Html.DisplayFor(modelItem => feedback.Comments)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Responded</th>
+                    <td>
+                        @feedback.Responded
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    }
+
+}
